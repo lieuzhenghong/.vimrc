@@ -1,12 +1,13 @@
+filetype on " filetype detection
+:filetype plugin on " for my csv.vim plugin
+
 syntax on
 let g:sierra_Midnight= 1
 colorscheme sierra
-:imap jj <Esc>
+:imap jk <Esc>
 set nocompatible " disable vi compatibility
 
 set hidden " allow buffers to be hidden
-
-filetype on " filetype detection
 
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 
@@ -32,6 +33,8 @@ set smartcase
 set showmatch " show matching parenthesis
 set incsearch " show matches while entering a search
 set hlsearch " highlight search terms
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
 
 set history=1000
 set undolevels=1000 " practically unlimited undos
